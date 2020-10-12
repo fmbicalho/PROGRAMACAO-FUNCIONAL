@@ -1,4 +1,4 @@
--- Ficha 1
+-- Ficha 1----------------------
 
 -- Exercício 1
 -- a) calcula perimetro
@@ -30,6 +30,8 @@ max2 x y = if x > y then x else y
 -- g) calcula o maior de 3 numeros inteiros usando max2
 max3 x y z = max2 (max2 x y) z
 
+
+
 -- Exercício 2
 
 nRaizes a b c 
@@ -45,6 +47,8 @@ raizes a b c
     where n = nRaizes a b c
           delta = b^2 - 4*a*c
           (x1,x2) = (((-b) + sqrt (delta))/ (2*a), ((-b) - sqrt (delta))/ (2*a))
+
+
 
 -- Exercício 3
 
@@ -70,6 +74,8 @@ hordiff h1 h2 = min2hor (abs (hor2min h1 - hor2min h2))
 
 addmins (h, m) min = min2hor (mod (hor2min (h, m) + min) 1440)
 
+
+
 -- Exercício 4
 
 data Hora = H Int Int deriving (Show, Eq)
@@ -87,6 +93,8 @@ hordiff' h1 h2 = min2hor' $ abs $ hor2min' h1 - hor2min' h2
 
 addmins' hor min = min2hor' $ mod (hor2min' hor + min) 1440
 
+
+
 -- Exercício 5
 
 data Semaforo = Verde | Amarelo | Vermelho deriving (Show, Eq)
@@ -103,6 +111,8 @@ stop s
 
 safe :: Semaforo -> Semaforo -> Bool
 safe s1 s2 = s1 == Vermelho || s2 == Vermelho
+
+
 
 -- Exercício 6
 
@@ -128,6 +138,8 @@ angulo ponto = case ponto of Cartesiano x y -> if x < 0 && y == 0 then pi else
 
 dist :: Ponto -> Ponto -> Double
 dist ponto1 ponto2 = sqrt (((posx ponto1 - posx ponto2) ^ 2) + (posy ponto1 - posy ponto2) ^ 2)
+
+
 
 -- Exercício 7
 
@@ -157,6 +169,8 @@ perimetro :: Figura -> Double
 perimetro (Circulo _ r) = 2 * pi * r
 perimetro (Retangulo p1 p2) = 2 * abs (posx p2 - posx p1) + 2 * abs (posy p2 - posy p1)
 perimetro (Triangulo p1 p2 p3) = dist p1 p2 + dist p2 p3 + dist p1 p3
+
+
 
 -- Exercicio 8
 
