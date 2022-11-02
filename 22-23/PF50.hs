@@ -161,7 +161,7 @@ powerEnumFrom' n m
 -------- 21 -------- OK
 
 isPrime' ::  Int -> Bool
-isPrime' x | x >= 2    = testar' x 2
+isPrime' x | x >= 2    = test' x 2
            | otherwise = False
 
 test' n m  | m*m > n      = True
