@@ -455,13 +455,3 @@ naoReparar (Bom:t)      = 1 + naoReparar t
 naoReparar (Razoavel:t) = 1 + naoReparar t
 naoReparar (Avariado:t) = naoReparar t
 
-
-
-
-
-
-
-
-
-
-
